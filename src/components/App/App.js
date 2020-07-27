@@ -4,11 +4,15 @@ import Header from "../Header";
 import GamePlay from "../GamePlay";
 import GameHistory from "../GameHistory";
 import Loading from "../Loading";
+import LanguageSelection from "../LanguageSelection";
 
 const App = ({
   showSettings
 }) => (
     <>
+      { /* language selection */}
+      <LanguageSelection />
+
       {/* header */}
       <Header />
 
