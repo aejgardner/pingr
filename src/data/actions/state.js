@@ -1,3 +1,9 @@
+export const newGame = () => {
+    return {
+        type: "NEW_GAME"
+    }
+}
+
 export const startGame = (data) => {
     return {
         type: "START_GAME",
