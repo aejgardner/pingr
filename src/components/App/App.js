@@ -2,12 +2,12 @@ import React from "react";
 import Settings from "../Settings";
 import Header from "../Header";
 import GamePlay from "../GamePlay";
+import GameHistory from "../GameHistory";
 
 const App = ({
   showSettings
 }) => (
     <>
-
       {/* header */}
       <Header />
 
@@ -17,6 +17,8 @@ const App = ({
         :
         <GamePlay />
       }
+
+      <GameHistory />
     </>
   );
 
