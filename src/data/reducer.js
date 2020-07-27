@@ -1,3 +1,5 @@
+import initial from './initial';
+
 const startGame = (state, action) => {
     return {
         ...state,
