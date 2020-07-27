@@ -1,6 +1,7 @@
 import React from 'react';
 import ScoreCard1 from "../ScoreCard/ScoreCard1";
 import ScoreCard2 from "../ScoreCard/ScoreCard2";
+import Winner from '../Winner';
 
 const GamePlay = ({ gameId, handleNewGame }) => (
     <>
@@ -18,6 +19,9 @@ const GamePlay = ({ gameId, handleNewGame }) => (
                 player={2}
             />
         </div>
+
+        { /* winner message */}
+        <Winner />
 
         <hr />
 
