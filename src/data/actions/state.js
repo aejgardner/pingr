@@ -37,3 +37,10 @@ export const saveHistory = (data) => {
         gameHistory: data,
     }
 }
+
+export const removeGame = (id) => {
+    return {
+        type: "REMOVE_GAME",
+        id,
+    }
+}
