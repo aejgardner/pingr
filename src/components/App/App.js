@@ -1,6 +1,7 @@
 import React from "react";
 import Settings from "../Settings";
 import Header from "../Header";
+import GamePlay from "../GamePlay";
 
 const App = ({
   showSettings
@@ -10,7 +11,12 @@ const App = ({
       {/* header */}
       <Header />
 
-      <Settings />
+      {/* Settings or Gameplay */}
+      {showSettings ?
+        <Settings />
+        :
+        <GamePlay />
+      }
     </>
   );
 
