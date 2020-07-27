@@ -4,8 +4,10 @@ import { deleteGame, getResumeGame } from '../../data/actions/api'
 
 const mapStateToProps = ({
     gameHistory,
+    language
 }) => ({
     gameHistory,
+    language
 })
 
 const mapDispatchToProps = (dispatch) => {

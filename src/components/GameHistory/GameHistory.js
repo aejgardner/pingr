@@ -1,24 +1,26 @@
 import React from 'react';
+import translations from '../translations.json'
 
 const GameHistory = ({
     gameHistory,
+    language,
     handleDelete,
     handleContinue,
 }) => (
         <div className="container">
             <h4 className="p-4 m-0 bg-info text-white border border-info rounded text-center">
-                Game History
+                {translations.game_history[language]}
             </h4>
             <table className="table border border-secondary rounded table-striped bg-light">
                 <thead className="thead-light">
                     <tr>
-                        <th scope="col">Game #</th>
-                        <th scope="col">Player</th>
+                        <th scope="col">{translations.game[language] + " #"}</th>
+                        <th scope="col">{translations.player[language]}</th>
                         <th scope="col">
-                            Wins/Loss
+                            {translations.wins[language] + "/" + translations.loss[language]}
                         </th>
-                        <th scope="col">Score</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">{translations.score[language]}</th>
+                        <th scope="col">{translations.actions[language]}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,21 +29,21 @@ const GameHistory = ({
                             <tr>
                                 <th scope="row" rowSpan="2">{game.id}</th>
                                 <td>
-                                    {`Player 1: ${game.player_1.name}`}
+                                    {`${translations.player[language]} 1: ${game.player_1.name}`}
                                 </td>
                                 {game.complete ? (game.player_1.won ?
                                     <td className="table-success">
-                                        Wins
+                                        {translations.wins[language]}
                                     </td> :
                                     <td className="table-danger">
-                                        Loss
+                                        {translations.loss[language]}
                                     </td>) :
                                     <th
                                         className="table-warning"
                                         scope="row"
                                         rowSpan="2"
                                     >
-                                        Not Complete
+                                        {translations.not_complete[language]}
                                     </th>
                                 }
                                 <td>{game.player_1.score}</td>
@@ -51,7 +53,7 @@ const GameHistory = ({
                                             className="btn btn-outline-primary btn-sm"
                                             onClick={() => handleContinue(game.id)} // load the game where it left off
                                         >
-                                            Continue
+                                            {translations.continue[language]}
                                         </button> :
                                         null
                                     }
@@ -59,14 +61,14 @@ const GameHistory = ({
                             </tr>
                             <tr>
                                 <td>
-                                    {`Player 2: ${game.player_2.name}`}
+                                    {`${translations.player[language]} 2: ${game.player_2.name}`}
                                 </td>
                                 {game.complete ? (game.player_2.won ?
                                     <td className="table-success">
-                                        Wins
+                                        {translations.wins[language]}
                                     </td> :
                                     <td className="table-danger">
-                                        Loss
+                                        {translations.loss[language]}
                                     </td>) : null
                                 }
                                 <td>{game.player_2.score}</td>
