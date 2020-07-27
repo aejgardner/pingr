@@ -1,0 +1,62 @@
+{
+    "player": {
+        "English": "Player",
+        "Esperanto": "Ludanto"
+    },
+    "serving": {
+        "English": "Serving",
+        "Esperanto": "Servas"
+    },
+    "new_game": {
+        "English": "New Game",
+        "Esperanto": "Nova Ludo"
+    },
+    "wins": {
+        "English": "Wins",
+        "Esperanto": "Venkoj"
+    },
+    "game": {
+        "English": "Game",
+        "Esperanto": "Ludo"
+    },
+    "loss": {
+        "English": "Loss",
+        "Esperanto": "Perdo"
+    },
+    "score": {
+        "English": "Score",
+        "Esperanto": "Poentaro"
+    },
+    "name": {
+        "English": "Name",
+        "Esperanto": "Nomo"
+    },
+    "winning_score": {
+        "English": "Winning Score",
+        "Esperanto": "Venkanta Poentaro"
+    },
+    "alt_serve": {
+        "English": "Alternate Serve Every",
+        "Esperanto": "Alternu servi ĉiun"
+    },
+    "start_game": {
+        "English": "Start Game",
+        "Esperanto": "Komencu Ludon"
+    },
+    "not_complete": {
+        "English": "Not Complete",
+        "Esperanto": "Ne Kompleta"
+    },
+    "actions": {
+        "English": "Actions",
+        "Esperanto": "Agoj"
+    },
+    "continue": {
+        "English": "Continue",
+        "Esperanto": "Daŭrigu"
+    },
+    "game_history": {
+        "English": "Game History",
+        "Esperanto": "Ludhistorio"
+    }
+}
