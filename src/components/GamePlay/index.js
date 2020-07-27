@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import GamePlay from './GamePlay';
 import { newGame } from '../../data/actions/state';
 
-const mapStateToProps = ({ gameId }) => ({ gameId })
+const mapStateToProps = ({ gameId, language }) => ({ gameId, language })
 
 const mapDispatchToProps = (dispatch) => {
     return {

@@ -1,14 +1,15 @@
 import React from 'react';
 import ScoreCard1 from "../ScoreCard/ScoreCard1";
 import ScoreCard2 from "../ScoreCard/ScoreCard2";
-import Winner from '../Winner';
+import Winner from '../Winner'
+import translations from '../translations'
 
-const GamePlay = ({ gameId, handleNewGame }) => (
+const GamePlay = ({ language, gameId, handleNewGame }) => (
     <>
         <h3
             class="text-center bg-warning w-50 m-auto p-4 border border-warning rounded"
         >
-            {`Game # ${gameId}`}
+            {`${translations.game[language]} # ${gameId}`}
         </h3>
         {/* gameplay scores section */}
         <div className="row mb-4">
@@ -31,7 +32,7 @@ const GamePlay = ({ gameId, handleNewGame }) => (
                 className="btn btn-primary"
                 onClick={handleNewGame}
             >
-                New Game
+                {translations.new_game[language]}
             </button>
         </div>
 
