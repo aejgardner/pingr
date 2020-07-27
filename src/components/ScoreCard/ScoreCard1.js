@@ -3,11 +3,13 @@ import ScoreCard from './ScoreCard';
 import { patchScore } from '../../data/actions/api';
 
 const mapStateToProps = ({
+    language,
     server,
     player1,
     winner,
     player1Name
 }) => ({
+    language,
     server,
     score: player1,
     gameOver: winner !== 0,
