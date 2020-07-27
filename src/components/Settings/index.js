@@ -6,12 +6,14 @@ const mapStateToProps = ({
     player1Name,
     player2Name,
     winningScore,
-    serveInterval
+    serveInterval,
+    language
 }) => ({
     player1Name,
     player2Name,
     winningScore,
-    serveInterval
+    serveInterval,
+    language
 })
 
 const mapDispatchToProps = (dispatch) => ({

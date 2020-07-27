@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import translations from '../../components/translations';
 
 const Settings = ({
     handleSubmit,
@@ -6,6 +7,7 @@ const Settings = ({
     player2Name,
     winningScore,
     serveInterval,
+    language
 }) => {
     const [player1NameInput, setPlayer1NameInput] = useState(player1Name);
     const [player2NameInput, setPlayer2NameInput] = useState(player2Name);
@@ -32,7 +34,7 @@ const Settings = ({
                 <h3 className="text-center border-bottom pb-4">New Game - Settings</h3>
                 <div className="form-group">
                     <label htmlFor="player1Name">
-                        Player 1 Name
+                        {`${translations.player[language]} 1 ${translations.name[language]}`}
                     </label>
                     <input
                         className="form-control"
@@ -44,7 +46,7 @@ const Settings = ({
                 </div>
                 <div className="form-group">
                     <label htmlFor="player2Name">
-                        Player 2 Name
+                        {`${translations.player[language]} 2 ${translations.name[language]}`}
                     </label>
                     <input
                         className="form-control"
@@ -56,7 +58,7 @@ const Settings = ({
                 </div>
                 <div className="form-group">
                     <label htmlFor="winningScore" >
-                        Winning Score
+                        {`${translations.winning_score[language]}`}
                     </label>
                     <input
                         className="form-control"
@@ -68,7 +70,7 @@ const Settings = ({
                 </div>
                 <div className="form-group">
                     <label htmlFor="alternateServe">
-                        Alternate Serve Every
+                        {`${translations.alt_serve[language]}:`}
                     </label>
                     <select
                         className="form-control"
@@ -87,7 +89,7 @@ const Settings = ({
                     type="submit"
                     className="btn btn-success"
                 >
-                    Start Game
+                    {`${translations.start_game[language]}`}
                 </button>
             </form>
         </div>
