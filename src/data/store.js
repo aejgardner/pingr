@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from "redux";
 import initial from "./initial";
-import reducer from "./reducers";
+import reducer from "./reducer";
 import thunk from "redux-thunk";
 
 // setup redux dev tools 
