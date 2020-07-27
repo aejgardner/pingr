@@ -1,7 +1,8 @@
 import axios from '../axios';
 import {
     startGame,
-    updateScore
+    updateScore,
+    saveHistory
 } from './state';
 
 export const postStartGame = ({
@@ -34,3 +35,9 @@ export const patchScore = player => (dispatch, getState) => {
         dispatch(updateScore(data.data));
     });
 };
+
+export const getGameHistory = () => (dispatch) => {
+    axios.get("/").then(({ data }) => {
+        dispatch(saveHistory(data.data))
+    })
+}

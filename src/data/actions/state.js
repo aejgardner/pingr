@@ -30,3 +30,10 @@ export const startGame = (data) => {
         serveInterval: +data.change_serve
     }
 }
+
+export const saveHistory = (data) => {
+    return {
+        type: "SAVE_HISTORY",
+        gameHistory: data,
+    }
+}

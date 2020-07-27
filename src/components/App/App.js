@@ -3,6 +3,7 @@ import Settings from "../Settings";
 import Header from "../Header";
 import GamePlay from "../GamePlay";
 import GameHistory from "../GameHistory";
+import Loading from "../Loading";
 
 const App = ({
   showSettings
@@ -18,7 +19,10 @@ const App = ({
         <GamePlay />
       }
 
-      <GameHistory />
+      {/* Game History, wrap in loading so we show loading bar until history is loaded from the API */}
+      <Loading>
+        <GameHistory />
+      </Loading>
     </>
   );
 
