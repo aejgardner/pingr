@@ -44,3 +44,17 @@ export const removeGame = (id) => {
         id,
     }
 }
+
+export const resumeGame = (data) => {
+    return {
+        type: "RESUME_GAME",
+        gameId: data.id,
+        player1: data.player_1.score,
+        player2: data.player_2.score,
+        player1Name: data.player_1.name,
+        player2Name: data.player_2.name,
+        winningScore: +data.winning_score,
+        serveInterval: +data.change_serve,
+        server: data.player_1.serving ? 1 : 2,
+    }
+}

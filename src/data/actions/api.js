@@ -3,7 +3,8 @@ import {
     startGame,
     updateScore,
     saveHistory,
-    removeGame
+    removeGame,
+    resumeGame
 } from './state';
 
 export const postStartGame = ({
@@ -49,4 +50,16 @@ export const deleteGame = (id) => {
             dispatch(removeGame(id))
         })
     }
+}
+
+export const getResumeGame = (id) => {
+    return (dispatch) => {
+        axios.get(`${id}`).then(({ data }) => {
+            if (!data.data.complete) {
+                dispatch(resumeGame(data.data));
+            } else {
+                getGameHistory();
+            }
+        })
+    };
 }

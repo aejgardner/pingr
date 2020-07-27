@@ -55,6 +55,31 @@ const removeGame = (state, action) => {
     }
 }
 
+const resumeGame = (
+    state,
+    { gameId,
+        player1,
+        player2,
+        player1Name,
+        player2Name,
+        winningScore,
+        serveInterval,
+        server
+    }) => {
+    return {
+        ...state,
+        showSettings: false,
+        gameId,
+        player1,
+        player2,
+        player1Name,
+        player2Name,
+        winningScore,
+        serveInterval,
+        server
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "UPDATE_SCORE": return updateScore(state, action); // increment player score
@@ -62,6 +87,7 @@ const reducer = (state, action) => {
         case "START_GAME": return startGame(state, action); // start a new game from the settings screen
         case "SAVE_HISTORY": return saveHistory(state, action); // save history from API to state
         case "REMOVE_GAME": return removeGame(state, action);
+        case "RESUME_GAME": return resumeGame(state, action);
         default: return state;
     }
 }
