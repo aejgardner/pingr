@@ -1,4 +1,6 @@
 import React from 'react';
+import ScoreCard1 from "../ScoreCard/ScoreCard1";
+import ScoreCard2 from "../ScoreCard/ScoreCard2";
 
 const GamePlay = ({ gameId, handleNewGame }) => (
     <>
