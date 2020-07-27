@@ -1,5 +1,22 @@
 import initial from './initial';
 
+const updateScore = (
+    state,
+    { player1,
+        player2,
+        server,
+        winner
+    }
+) => {
+    return {
+        ...state,
+        player1,
+        player2,
+        server,
+        winner,
+    }
+}
+
 const startGame = (state, action) => {
     return {
         ...state,
@@ -25,6 +42,7 @@ const newGame = (state) => {
 
 const reducer = (state, action) => {
     switch (action.type) {
+        case "UPDATE_SCORE": return updateScore(state, action); // increment player score
         case "NEW_GAME": return newGame(state); // after a game has been won, start a new game
         case "START_GAME": return startGame(state, action); // start a new game from the settings screen
         default: return state;
