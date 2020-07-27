@@ -20,6 +20,12 @@ export const newGame = () => {
     }
 }
 
+export const toggleLanguage = () => {
+    return {
+        type: "TOGGLE_LANGUAGE"
+    }
+}
+
 export const startGame = (data) => {
     return {
         type: "START_GAME",
